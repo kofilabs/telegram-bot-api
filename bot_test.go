@@ -255,7 +255,7 @@ func TestSendWithExistingVoice(t *testing.T) {
 func TestSendWithContact(t *testing.T) {
 	bot, _ := getBot(t)
 
-	contact := tgbotapi.NewContact(ChatID, "5551234567", "Test")
+	contact := tgbotapi.NewContact(ChatID, "5551234567", "Tester", "Test", "")
 
 	if _, err := bot.Send(contact); err != nil {
 		t.Error(err)

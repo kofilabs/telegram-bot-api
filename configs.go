@@ -758,6 +758,7 @@ type ContactConfig struct {
 	PhoneNumber string
 	FirstName   string
 	LastName    string
+	VCard       string
 }
 
 func (config ContactConfig) values() (url.Values, error) {
@@ -769,6 +770,7 @@ func (config ContactConfig) values() (url.Values, error) {
 	v.Add("phone_number", config.PhoneNumber)
 	v.Add("first_name", config.FirstName)
 	v.Add("last_name", config.LastName)
+	v.Add("vcard", config.VCard)
 
 	return v, nil
 }

@@ -788,6 +788,8 @@ type Contact struct {
 	//
 	// optional
 	UserID int `json:"user_id"`
+	// optional
+	VCard string `json:"vcard,omitempty"`
 }
 
 // Location contains information about a place.

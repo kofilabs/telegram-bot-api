@@ -343,13 +343,15 @@ func NewInputMediaVideo(media string) InputMediaVideo {
 }
 
 // NewContact allows you to send a shared contact.
-func NewContact(chatID int64, phoneNumber, firstName string) ContactConfig {
+func NewContact(chatID int64, phoneNumber, firstName, lastName, vcard string) ContactConfig {
 	return ContactConfig{
 		BaseChat: BaseChat{
 			ChatID: chatID,
 		},
 		PhoneNumber: phoneNumber,
 		FirstName:   firstName,
+		LastName:   lastName,
+		VCard:   vcard,
 	}
 }
 
